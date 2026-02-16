@@ -1,0 +1,2511 @@
+
+;=====================================================================
+; 特殊エフェクト関連
+;=====================================================================
+
+;---------------------------------------------------------------------------
+;血（最小）
+[Statedef 8100]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y+(parent,Pos Y-enemynear,Pos Y)))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 20
+
+;---------------------------------------------------------------------------
+;血（小）1
+[Statedef 8110]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4,-10
+accel = -.15,.9
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+
+;---------------------------------------------------------------------------
+;血（中）（縦）
+[Statedef 8120]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 1
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 2
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 3
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 20
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.5,-8.5
+accel = -.08,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4,-10
+accel = -.15,.9
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8110
+id = 8110
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.25,-.03
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 20
+
+;---------------------------------------------------------------------------
+;血（中）（横）
+[Statedef 8121]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 1
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 2
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 3
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 20
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.5,-8.5
+accel = -.08,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4,-10
+accel = -.15,.9
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8111
+id = 8111
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.45,0
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+
+;---------------------------------------------------------------------------
+;血（大）（縦）
+[Statedef 8130]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 7,-4
+accel = -.2,.09
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 20
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.5,-8.5
+accel = -.08,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 1
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2,-10
+accel = .05,.9
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8115
+id = 8115
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = .07,-.13
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 30
+
+;---------------------------------------------------------------------------
+;血（大）（斜め）
+[Statedef 8131]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 7,-4
+accel = -.2,.09
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 20
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.5,-8.5
+accel = -.08,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 1
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2,-10
+accel = .05,.9
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8116
+id = 8116
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = .07,-.13
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 30
+
+;---------------------------------------------------------------------------
+;血（大）（横）
+[Statedef 8132]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -4,-10.5
+accel = .18,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6,-9
+accel = -.17,1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-11
+accel = -.16,.9
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 7,-4
+accel = -.2,.09
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 20
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.5,-8.5
+accel = -.08,.7
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 1
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2,-10
+accel = .05,.9
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8117
+id = 8117
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = .07,-.13
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 30
+
+;---------------------------------------------------------------------------
+;血（一閃）
+[Statedef 8140]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State 3000,PlaySnd]
+type = PlaySnd
+trigger1 = Time = 1
+value = 1,10
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.2,-8.5
+accel = -.12,.5
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 0
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 1.1,-4
+accel = -.05,.3
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 0
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4,-7
+accel = -.1,.61
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 5
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = .3,-2
+accel = 0,.37
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 5
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.5,-6.4
+accel = -.05,.4
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 5
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 2.8,-8
+accel = -.13,.58
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 16
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.6,-9.5
+accel = -.12,.47
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 16
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.7,-5.6
+accel = -.07,.4
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 16
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.2,-8.2
+accel = -.12,.74
+
+[State 8121, Blood]
+type = Explod
+trigger1 = Time = 16
+anim = 8111
+id = 8111
+postype = p2
+pos = enemynear, const(size.mid.pos.x), enemynear, const(size.mid.pos.y)
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.25,0
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 17
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.2,-10.2
+accel = -.09,.53
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 17
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -1.3,-6.1
+accel = .08,.6
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 17
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2.3,-5.9
+accel = .09,.71
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 17
+anim = 8117
+id = 8117
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.17,0
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 18
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -3.1,-5.4
+accel = .13,.48
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 18
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.4,-7.3
+accel = -.04,.6
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 18
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2.2,-9.2
+accel = .06,.63
+
+[State 8121, Blood]
+type = Explod
+trigger1 = Time = 18
+anim = 8111
+id = 8111
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, enemynear, const(size.mid.pos.y)+3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.25,0
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 19
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 2.9,-7.1
+accel = -.07,.4
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 20
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 5.4,-8.5
+accel = -.13,.5
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 20
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 1.6,-9
+accel = -.07,.48
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 20
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.6,-7.3
+accel = -.11,.48
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 20
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-15, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -1.6,-8.1
+accel = .07,.54
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 20
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -1.8,-6.9
+accel = .11,.56
+
+[State 8130, Blood]
+type = Explod
+trigger1 = Time = 20
+anim = 8115
+id = 8115
+postype = p2
+pos = enemynear, const(size.mid.pos.x), enemynear, const(size.mid.pos.y)-18
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = .07,-.08
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 21
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-14
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 0,-5.6
+accel = -.18,.5
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 21
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 6.5,-9.7
+accel = -.08,.7
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 21
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -1.7,-9.4
+accel = .07,.52
+
+[State 8121, Blood]
+type = Explod
+trigger1 = Time = 21
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), enemynear, const(size.mid.pos.y)-3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 5,-8
+accel = -.15,.9
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 22
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-10, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 0,-4.2
+accel = -.11,.43
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 22
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-12, enemynear, const(size.mid.pos.y)-3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 1.8,-6.7
+accel = -.1,.45
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 22
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2,-7.4
+accel = .05,.52
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 26
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+10, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 5.3,-9.7
+accel = -.17,.5
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 26
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+2, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.8,-7.4
+accel = -.1,.62
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 26
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+3, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 2.6,-9.4
+accel = .12,.52
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 26
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -1.1,-6.8
+accel = .03,.61
+
+[State 8121, Blood]
+type = Explod
+trigger1 = Time = 26
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), enemynear, const(size.mid.pos.y)-3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2,-9.9
+accel = .06,.9
+facing = -1
+
+[State 8120, Blood]
+type = Explod
+trigger1 = Time = 26
+anim = 8110
+id = 8110
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-18, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.05,-.03
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 29
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-2, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2.5,-9.6
+accel = .1,.65
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 29
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-13, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.1,-7.8
+accel = -.11,.62
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 29
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 3.3,-5.4
+accel = -.1,.56
+
+[State 8121, Blood]
+type = Explod
+trigger1 = Time = 29
+anim = 8111
+id = 8111
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+10, enemynear, const(size.mid.pos.y)-5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = -.25,0
+facing = -1
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 34
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-2, enemynear, const(size.mid.pos.y)-4
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 2.7,-10.8
+accel = -.15,.69
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 34
+anim = 8100
+id = 8100
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-13, enemynear, const(size.mid.pos.y)-6
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.3,-7.4
+accel = -.17,.6
+
+[State 8132, Blood]
+type = Explod
+trigger1 = Time = 34
+anim = 8101
+id = 8101
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2.5,-9.4
+accel = .1,.69
+
+[State 8121, Blood]
+type = Explod
+trigger1 = Time = 34
+anim = 8105
+id = 8105
+postype = p2
+pos = enemynear, const(size.mid.pos.x), enemynear, const(size.mid.pos.y)-3
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = -2,-8
+accel = .15,.9
+facing = -1
+
+[State 8130, Blood]
+type = Explod
+trigger1 = Time = 34
+anim = 8115
+id = 8115
+postype = p2
+pos = enemynear, const(size.mid.pos.x), enemynear, const(size.mid.pos.y)-7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+accel = .08,-.12
+facing = -1
+
+[State 8132, DestroySelf]
+type = DestroySelf
+trigger1 = time = 60
+
+;---------------------------------------------------------------------------
+;ガードエフェクト
+[Statedef 8020]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8125
+id = 8125
+postype = p2
+pos = enemynear, const(size.mid.pos.x), ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 4.5,-8
+accel = -.05,.5
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8126
+id = 8126
+postype = p2
+pos = enemynear, const(size.mid.pos.x)+5, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+5
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 2.5,-10
+accel = -.03,.5
+facing = -1
+
+[State -3, Burn sparks]
+type = Explod
+trigger1 = Time = 0
+anim = 8127
+id = 8127
+postype = p2
+pos = enemynear, const(size.mid.pos.x)-7, ceil(parent,var(46)+(parent,Pos Y-enemynear,Pos Y))+7
+random = 5,5
+ownpal = 1
+bindtime = 1
+ignorehitpause = 1
+sprpriority = 7
+vel = 0,-9
+accel = -.08,.5
+facing = -1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+
+;---------------------------------------------------------------------------
+; 剣気ゲージ
+[Statedef 7000]
+physics = N
+anim = 10000
+ctrl = 0
+
+[State 40, 2]
+type = VarSet
+trigger1 = 1
+var(1) = ifelse((root,fvar(6)=1),78,ifelse((root,fvar(6)=1.31),102,118))
+
+[State 8100, 1]
+type = Explod
+trigger1 = 1
+anim = 7000+ifelse(var(1)=118,2,ifelse(var(1)=102,1,0))
+postype = back
+pos = floor(root,var(12)),floor(root,var(13))
+ownpal = 1
+ontop = 1
+id = 7000
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 0
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 1
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-8),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 2
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-16),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 3
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-24),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 4
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-32),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 5
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-40),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 6
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-48),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 7
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-56),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 8
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-64),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 9
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-72),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 10
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-80),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 11
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-88),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 12
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-96),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,fvar(5)*100) / 8) > 13
+trigger1 = floor(root,fvar(5)*100) != var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7107
+postype = back
+pos = floor(root,var(12)-104),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor(root,fvar(5)*100) % 8 && floor(root,fvar(5)*100) < var(1)
+trigger1 = root,fvar(5)<1.18
+anim = 7099 + floor(root,fvar(5)*100) % 8
+postype = back
+pos = floor(root,var(12)-ceil(floor(root,fvar(5)*100) / 8) * 8),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor(root,fvar(5)*100)=var(1)
+trigger2 = root,fvar(5)>=1.18
+anim = ifelse(var(1)=78,7150,ifelse(var(1)=102,7160,7170))+(gametime % 16 / 4)
+postype = back
+pos = floor(root,var(12)),floor(root,var(13))
+ownpal = 1
+ontop = 1
+sprpriority = 10
+pausemovetime = -1
+
+;---------------------------------------------------------------------------
+; 怒りゲージ
+[Statedef 7500]
+physics = N
+anim = 10000
+ctrl = 0
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = root,var(15) != -1
+trigger1 = root,var(38) >= 63 && root,var(38) < 100
+var(15) = 550
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = root,var(38) >= 63
+var(38) = 100
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = root,var(15) = -1
+trigger1 = root,var(38) > 63
+var(38) = 63
+
+[State 40, 2]
+type = ParentVaradd
+trigger1 = root,var(15) = -1
+trigger1 = root,var(38) > 0 && var(38) < 100
+var(38) = -1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor(root,var(38)) != 100
+anim = 7500 + (facing=-1)
+postype = back
+pos = floor(root,var(17)),floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor(root,var(38)) = 100 && !NumExplod(7505)
+anim = 7505
+postype = back
+pos = floor(root,var(17)),floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7505
+bindtime = -1
+removetime = -1
+supermove = 1
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor(root,var(38)) = 100 && !NumExplod(7506)
+anim = 7506
+postype = back
+pos = floor(root,var(17)),floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7506
+bindtime = -1
+removetime = -1
+supermove = 1
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = RemoveExplod
+trigger1 = floor(root,var(38)) != 100 && NumExplod(7505)
+trigger2 = Root,fvar(6) = 1.51
+id = 7505
+
+[State 8100, 1]
+type = RemoveExplod
+trigger1 = floor(root,var(38)) != 100 && NumExplod(7506)
+trigger2 = Root,fvar(6) = 1.51
+id = 7506
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,var(38)) / 10) > 0
+trigger1 = floor(root,var(38)) != 100
+anim = 7519 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17)),floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,var(38)) / 10) > 1
+trigger1 = floor(root,var(38)) != 100
+anim = 7519 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17))-10,floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,var(38)) / 10) > 2
+trigger1 = floor(root,var(38)) != 100
+anim = 7519 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17))-20,floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,var(38)) / 10) > 3
+trigger1 = floor(root,var(38)) != 100
+anim = 7519 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17))-30,floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,var(38)) / 10) > 4
+trigger1 = floor(root,var(38)) != 100
+anim = 7519 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17))-40,floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor((root,var(38)) / 10) > 5
+trigger1 = floor(root,var(38)) != 100
+anim = 7519 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17))-50,floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = floor(root,var(38)) % 10 && floor(root,var(38)) < 63
+anim = 7509 + floor(root,var(38)) % 10 + (gametime % 32 / 4) * 10
+postype = back
+pos = floor(root,var(17))-ceil(floor(root,var(38)) / 10) * 10,floor(root,var(18))
+ownpal = 1
+ontop = 1
+id = 7500
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = 1
+anim = 7590
+postype = back
+pos = floor(root,var(17))-1-floor(root,fvar(39)/2),floor(root,var(18))+1
+ownpal = 1
+ontop = 1
+id = 7590
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = Explod
+trigger1 = RoundState = 2
+trigger1 = floor(Root,fvar(39)*8) >= Root,life
+trigger1 = Root,var(37)
+anim = 7591 +ifelse((gametime % 12=[0,3]),0,ifelse((gametime % 12=[4,7]),1,2)) + (facing=-1)*3
+postype = back
+pos = floor(root,var(17))-71,floor(root,var(18))-18
+scale = .5,.5
+ownpal = 1
+ontop = 1
+id = 7595
+sprpriority = 10
+pausemovetime = 99999999
+ignorehitpause = 1
+
+[State 8100, 1]
+type = RemoveExplod
+trigger1 = Root,fvar(6) = 1.51
+trigger2 = Root,var(39) != 0
+id = 7500
+
+[State 8100, 1]
+type = RemoveExplod
+trigger1 = Root,var(39) != 0
+id = 7590
+
+[State 7602,DestroySelf]
+type = DestroySelf
+trigger1 = Root,fvar(6) = 1.51
+trigger2 = Root,var(39) != 0
+
+;---------------------------------------------------------------------------
+; 怒り爆発ゲージ
+[Statedef 7510]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = Time = 0
+var(39) = 1
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = Time = 0
+var(38) = 0
+
+[State 40, 2]
+type = ParentVarSet
+trigger1 = 1
+fvar(6) = 1.51
+
+[State 40, 2]
+type = ParentVarSet
+trigger1 = Time = 0
+fvar(5) = 1.18
+
+[State 820, screenbound]
+type = screenbound
+Trigger1 = time <= 27
+value = 1
+movecamera = 0,-16
+
+[State 10000, 1]
+type = ParentVarSet
+trigger1 = time = 27
+fvar(38) = 27
+
+[State 10000, 1]
+type = ParentVarAdd
+trigger1 = time = [27,45]
+fvar(38) = -1.5
+
+[State 10000, 1]
+type = ParentVarAdd
+triggerall = roundstate = 2
+trigger1 = time > 45
+fvar(38) = .067
+
+[State -2, Explod(P2)]
+type = Explod
+trigger1 = time = 0
+anim = 7300+(facing=-1)
+id = 7300
+pos = floor(root,var(17))-71,floor(root,var(18))+2
+postype = back
+ownpal = 1
+ontop = 1
+sprpriority = 10
+bindtime = -1
+
+[State -2, Explod(P2)]
+type = Explod
+trigger1 = time >= 27
+anim = 7310
+id = 7310
+pos = floor(root,var(17))-71,floor(root,var(18))+2
+postype = back
+ownpal = 1
+ontop = 1
+sprpriority = 10
+
+[State -2, Explod(P2)]
+type = Explod
+trigger1 = time >= 27
+anim = 7315
+id = 7315
+pos = floor(root,var(17))-71-(facing=-1),floor(root,var(18))+2
+postype = back
+ownpal = 1
+ontop = 1
+sprpriority = 10
+
+[State 4900, 16]
+type = modifyExplod
+trigger1 = Numexplod(7315) && Root,StateNo != 3600
+Id = 7315
+scale = (Root,FVar(38))/64,1
+ignorehitpause = 1
+
+[State -2, Remove Mode Bar]
+type = RemoveExplod
+trigger1 = Time > 0 && Root,fvar(38) >= 64
+id = 7310
+
+[State -2, Remove Mode Bar]
+type = RemoveExplod
+trigger1 = Time > 0 && Root,fvar(38) >= 64
+id = 7315
+
+[State 10000, 1]
+type = ParentVarSet
+trigger1 = Root,fvar(38) >= 64
+fvar(38) = 0
+
+[State 40, 2]
+type = Varadd
+trigger1 = time = [27,45]
+var(1) = -14
+
+[State 40, 2]
+type = Varadd
+trigger1 = time = [60,78]
+var(1) = 14
+
+[State 850, 1]
+type = BGPalfx
+trigger1 = time = [27,60]
+time = 1
+add = var(1),var(1),var(1)
+
+[State 850, 1]
+type = BGPalfx
+trigger1 = time = [61,78]
+time = 1
+add = var(1),var(1),var(1)
+invertall = 1
+
+[State 3100,BGPalFx]
+type = BGPalFx
+trigger1 = time > 78
+trigger1 = StateNo != [3010,3999]
+invertall = 1
+time = 1
+
+[State -2,AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = NoFG
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = time >= 45 && !Numexplod(7310) && !Numexplod(7315)
+trigger2 = root,Alive=0
+
+;---------------------------------------------------------------------------
+; 無の境地ゲージ
+[Statedef 7550]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+
+[State -2, Explod]
+type = Explod
+triggerall = teamside=1
+trigger1 = Time = 0
+anim = 6110
+id = 6110
+pos = 0,0
+postype = Left
+ownpal = 1
+sprpriority = 10
+bindtime = -1
+pausemovetime = 99999999999999
+removeTime = 92
+
+[State -2, Explod]
+type = Explod
+triggerall = teamside=1
+trigger1 = Time = 55
+anim = 6101
+id = 6101
+pos = 50,105
+postype = Left
+ownpal = 1
+sprpriority = 10
+bindtime = -1
+pausemovetime = 99999999999999
+
+[State -2, Explod]
+type = Explod
+triggerall = teamside=2
+trigger1 = Time = 0
+anim = 6110
+id = 6110
+pos = 0,0
+postype = Right
+ownpal = 1
+sprpriority = 10
+bindtime = -1
+pausemovetime = 99999999999999
+removeTime = 92
+facing = -1
+
+[State -2, Explod]
+type = Explod
+triggerall = teamside=2
+trigger1 = Time = 55
+anim = 6101
+id = 6101
+pos = -50,105
+postype = Right
+ownpal = 1
+sprpriority = 10
+bindtime = -1
+pausemovetime = 99999999999999
+facing = -1
+
+[State 3000,EnvColor]
+type = EnvColor
+trigger1 = Time < 93
+value = 0, 0, 0
+time = 1
+under = 1
+
+[State -2,AssertSpecial]
+type = AssertSpecial
+trigger1 = Time < 93
+flag = NoBG
+flag2 = NoFG
+
+[State 100,1]
+type = PlaySnd
+trigger1 = Time = 25
+value = 0, 6
+channel = 0
+
+[State 8100, 1]
+type = VarSet
+trigger1 = Time = 93
+var(1) = 1
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = Time = 0
+var(39) = 2
+
+[State 8100, 1]
+type = ParentVarSet
+trigger1 = Time = 0
+var(38) = 0
+
+[State 3100,BGPalFx]
+type = BGPalFx
+trigger1 = Time < 93
+invertall = 1
+time = 2
+
+[State -2, Explod(P2)]
+type = Explod
+trigger1 = Time = 0
+anim = 7350
+id = 7350
+pos = floor(root,var(17))-71,floor(root,var(18))+2
+postype = back
+ownpal = 1
+ontop = 1
+sprpriority = 9
+bindtime = -1
+pausemovetime = 99999999999999
+removeTime = -1
+
+[State -2, Explod(P2)]
+type = Explod
+trigger1 = Time = 0
+anim = 7316
+id = 7315
+pos = floor(root,var(17))-71-(facing=-1),floor(root,var(18))+2
+postype = back
+ownpal = 1
+ontop = 1
+sprpriority = 10
+bindtime = -1
+scale = ifelse((root,fvar(39) <= 64),(((root,fvar(39))-64)/64),0),1
+pausemovetime = 99999999999999
+removeTime = -1
+
+[State 4900, 16]
+type = modifyExplod
+trigger1 = Time > 93
+trigger1 = Numexplod(7315) && root,fvar(39) <= 64
+Id = 7315
+scale = ((root,fvar(39))-64)/64,1
+pausemovetime = 99999999999999
+
+[State 3005, Pause]
+type = Pause
+trigger1 = Time = 0
+time = 92
+MoveTime = 92
+ignorehitpause = 1
+
+[State -2, Remove Mode Bar]
+type = RemoveExplod
+triggerall = Time > 93
+trigger1 = root,fvar(39) <= 0
+trigger2 = root,Alive=0
+trigger3 = root,Movetype = H
+trigger4 = roundstate != 2
+id = 7315
+
+[State -2, Remove Mode Bar]
+type = RemoveExplod
+triggerall = Time > 93
+trigger1 = root,fvar(39) <= 0
+trigger2 = root,Alive=0
+trigger3 = root,Movetype = H
+trigger4 = roundstate != 2
+id = 7350
+
+[State 4110, DestroySelf]
+type = DestroySelf
+triggerall = Time > 93
+trigger1 = root,fvar(39) <= 0
+trigger2 = root,Alive=0
+trigger3 = root,Movetype = H
+trigger4 = roundstate != 2
+
+;---------------------------------------------------------------------------
+; カウンターヒット表記
+[Statedef 8900]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+
+[State -2,CounterHitFigure]
+type = Explod
+trigger1 = Time = 0 && teamside = 1
+anim = 8900
+id = 8900
+postype = Left
+pos = 62,112
+facing = 1
+bindtime = -1
+ontop = 1
+removetime = -2
+sprpriority = 5
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+pausemovetime = 99999999999999
+
+[State -2,CounterHitFigure]
+type = Explod
+trigger1 = Time = 0 && teamside = 1
+anim = 8910+ifelse((IsHelper(8900)),6,ifelse((IsHelper(8901)),5,ifelse((IsHelper(8902)),4,ifelse((IsHelper(8903)),3,ifelse((IsHelper(8904)),2,ifelse((IsHelper(8905)),1,0))))))
+id = 8910
+postype = Left
+pos = 62,112
+facing = 1
+bindtime = -1
+ontop = 1
+removetime = -2
+sprpriority = 5
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+pausemovetime = 99999999999999
+
+[State -2,CounterHitFigure]
+type = Explod
+trigger1 = Time = 0 && teamside = 2
+anim = 8905
+id = 8900
+postype = Right
+pos = -62,112
+facing = 1
+bindtime = -1
+ontop = 1
+removetime = -2
+sprpriority = 5
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+pausemovetime = 99999999999999
+
+[State -2,CounterHitFigure]
+type = Explod
+trigger1 = Time = 0 && teamside = 2
+anim = 8920+ifelse((IsHelper(8900)),6,ifelse((IsHelper(8901)),5,ifelse((IsHelper(8902)),4,ifelse((IsHelper(8903)),3,ifelse((IsHelper(8904)),2,ifelse((IsHelper(8905)),1,0))))))
+id = 8910
+postype = Right
+pos = -62,112
+facing = 1
+bindtime = -1
+ontop = 1
+removetime = -2
+sprpriority = 5
+ownpal = 1
+ignorehitpause = 1
+persistent = 0
+pausemovetime = 99999999999999
+
+[State -3,PlaySnd1]
+type = PlaySnd
+trigger1 = Time = 0
+value = 1,6
+persistent = 0
+
+[State -2,Envcolor]
+type = Envcolor
+trigger1 = Time = 0
+value = 255, 255, 255
+persistent = 0
+ignorehitpause = 1
+time = 7
+under = 1
+
+[State 4110, DestroySelf]
+type = DestroySelf
+trigger1 = Time > 0
+trigger1 = !NumExplod(8900) && !NumExplod(8910)
+
+;---------------------------------------------------------------------------
+; KOフィニッシュ処理
+;------------------------ 
+[Statedef 2800]
+type = A
+movetype = I
+physics = N
+ctrl = 0
+anim = 10000
+velset = 0,0
+ownpal = 1
+
+[State 1000,***]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+flag2 = invisible
+
+[State 3005, Envcolor]
+type = BGPalfx
+trigger1 = time < 80
+add = IfElse(time%2 = 1,255,0),IfElse(time%2 = 1,255,0),IfElse(time%2 = 1,255,0)
+mul = IfElse(time%2 = 1,255,0),IfElse(time%2 = 1,255,0),IfElse(time%2 = 1,255,0)
+ignorehitpause = 1
+time = 1
+
+[State 180, 2]
+type = PlaySnd
+trigger1 = Time = 0
+value = 1,12
+persistent = 0
+
+[State 10010,DestroySelf]
+type = DestroySelf
+trigger1 = RoundState = 4
+
+;---------------------------------------------------------------------
+; CPU判別
+[Statedef 1]
+anim = 10000
+ctrl = 0
+
+[State 208, a1]
+type = Turn
+trigger1 = facing != parent, facing
+
+[State 208, ww2]
+type = ParentVarSet
+triggerall = (Root,Stateno != [5000,5999]) && (Root,Anim != [5,6]) && Root,Movetype = I
+triggerall = root,stateno = [0,99]
+triggerall = root,ctrl = 1
+triggerall = var(1) = 0
+triggerall = Root,RoundState = 2
+trigger1 = Root,command = "a"
+trigger2 = Root,command = "b"
+trigger3 = Root,command = "c"
+trigger4 = Root,command = "x"
+trigger5 = Root,command = "y"
+trigger6 = Root,command = "z"
+trigger7 = Root,command = "holdfwd"
+trigger8 = Root,command = "holdback"
+trigger9 = Root,command = "holdup"
+trigger10 = Root,command = "holddown"
+var(46) = 1
+
+[State 208, s3]
+type = ParentVarSet
+triggerall = (Root,Stateno != [5000,5999]) && (Root,Anim != [5,6]) && Root,Movetype = I
+triggerall = Root,stateno = [0,99]
+triggerall = Root,ctrl = 1
+triggerall = Root,var(46) = 1
+triggerall = Root,RoundState = 2
+trigger1 = (command = "a" && Root,command = "a")
+trigger2 = (command = "b" && Root,command = "b")
+trigger3 = (command = "c" && Root,command = "c")
+trigger4 = (command = "x" && Root,command = "x")
+trigger5 = (command = "y" && Root,command = "y")
+trigger6 = (command = "z" && Root,command = "z")
+trigger7 = (command = "holdfwd" && Root,command = "holdfwd")
+trigger8 = (command = "holdback" && Root,command = "holdback")
+trigger9 = (command = "holdup" && Root,command = "holdup")
+trigger10 = (command = "holddown" && Root,command = "holddown")
+var(46) = 0
+
+[State 208, d4]
+type = VarSet
+trigger1 = var(1) = 1
+var(1) = 0
+
+[State 208, 5]
+type = VarSet
+triggerall = (Root,Stateno != [5000,5999]) && (Root,Anim != [5,6]) && parent, Movetype = I
+triggerall = root,stateno = [0,99]
+triggerall = root,ctrl = 1
+triggerall = var(1) = 0
+triggerall = Root,RoundState = 2
+trigger1 = Root,command = "a"
+trigger2 = Root,command = "b"
+trigger3 = Root,command = "c"
+trigger4 = Root,command = "x"
+trigger5 = Root,command = "y"
+trigger6 = Root,command = "z"
+trigger7 = Root,command = "holdfwd"
+trigger8 = Root,command = "holdback"
+trigger9 = Root,command = "holdup"
+trigger10 = Root,command = "holddown"
+var(1) = 1
+
+[State 208, w6]
+type = Destroyself
+trigger1 = Root,var(45) = 1
+trigger2 = Root,var(46) = 1
+
+

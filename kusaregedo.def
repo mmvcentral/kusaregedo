@@ -1,0 +1,31 @@
+;=====================================================================
+;  DEF File For "Kusaregedo"                           Made By H"
+;                                       Ver. 1.03          
+;=====================================================================
+; Player Information
+[Info]
+name    ="kusaregedo"
+displayname="Kusaregedo"
+versiondate=02,24,2008
+mugenversion=04,14,2002
+author		="Hh"	
+pal.defaults=1,2,3,4,5,6
+
+[Files]
+cmd     =kusaregedo.cmd
+cns     =kusaregedo-N.cns	;Constants
+st      =kusaregedo-N.cns	;States (Normal)
+st1     =kusaregedo-S.cns
+st2     =kusaregedo-H.cns
+st3     =SSV-Helper.cns
+st4     =config.txt
+stcommon=common1.cns	;Common states (in data/)
+sprite  =kusaregedo.sff	;Sprite
+anim    =kusaregedo.air	;Animation
+sound   =kusaregedo.snd	;Sound
+pal1    =pal/kusaregedo04.act
+pal2    =pal/kusaregedo05.act
+pal3    =pal/kusaregedo06.act
+pal4    =pal/kusaregedo01.act
+pal5    =pal/kusaregedo02.act
+pal6    =pal/kusaregedo03.act
