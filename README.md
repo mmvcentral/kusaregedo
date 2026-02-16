@@ -59,7 +59,7 @@ kusaregedo/
 ├── SSV-Helper.cns        # Helper states (blood effects, gauges, etc.)
 ├── config.txt            # Round initialization & config (power gauge, etc.)
 ├── kusaregedo.air        # Animation data
-├── skill.htm             # Skill/move list (Japanese)
+├── skill.htm             # Skill/move list
 ├── skill/skill.htm       # Skill reference copy
 └── docs/                 # Documentation
     ├── ARCHITECTURE.md   # System architecture, skills, animations
